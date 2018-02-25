@@ -19,9 +19,6 @@ class TestKeys(unittest.TestCase):
         self.assertRaises(ValueError,keys.add,name="sla", secret="a secret")
         self.assertRaises(ValueError,keys.add,name="d", secret="a secret")
         
-        #if module is in name then secret should equal secret
-        self.assertEqual(keys.add(name="slack", secret="secret"),"secret")
-        
         #Raise ValueError if key name is None
         self.assertRaises(ValueError, name = None, secret="secret")
         #Raise ValueError if key name is a boolean
