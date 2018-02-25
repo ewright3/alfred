@@ -13,6 +13,7 @@ class TestKeys(unittest.TestCase):
         #Raise ValueError if key name equal internal module
         self.assertRaises(ValueError,keys.addKey,name="__init__", secret="a secret")
         self.assertRaises(ValueError,keys.addKey,name="__pycache__", secret="a secret")
+        self.assertRaises(ValueError,keys.addKey,name="__doc__", secret = "a secret.")
         
         #Raises ValueError if full module name is not used
         self.assertRaises(ValueError,keys.addKey,name="down", secret="a secret")

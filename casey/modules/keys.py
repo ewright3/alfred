@@ -13,11 +13,26 @@ def newKeyStore(file):
 
     #private key stored in path outside
 
+## Functions to build
+#-ListKeys(keystore)
+#-UpdateKey(name)
+#-NewKeyStore()
+#-DeleteKeyStore(keystore)
+#-MigrateKeystore(oldkeystore, newkeystore) 
+    #You cannont change keys on a keystore.
+    #You must create a new keystore move the keys
+    #then, delete the old keystore and keys,
+    # after validating the keys were moved properly.
 
     #public key stored in keys folder for encrypting secrets. 
 
 def addKey(name, secret):
-    
+    """Creates a new key to store API credentials.""" 
+    ## New Feature ##
+    #add optional urlbase parameter
+    #use requests to valdate baseurl (200) response 
+    #Check for existing keystore
+
     #Validate Input
     if name == "":
         raise ValueError("'name' must not be blank.")
@@ -54,3 +69,7 @@ def addKey(name, secret):
     
 
 #print(add(name="slack", secret="secret"))  
+
+
+
+
