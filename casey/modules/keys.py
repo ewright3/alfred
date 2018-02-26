@@ -1,4 +1,5 @@
 import os
+import validators
 
 
 package_directory = os.path.dirname(os.path.abspath(__file__))
